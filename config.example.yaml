@@ -1,0 +1,22 @@
+# Plex AI Titler Configuration
+
+ai:
+  # OpenAI-compatible API endpoint
+  endpoint: "https://api.synthetic.new/openai/v1"
+
+  # Model to use
+  model: "hf:openai/gpt-oss-120b"
+
+  # API key (can also be set via OPENAI_API_KEY environment variable)
+  api_key: "sk-..."
+
+  # Temperature for generation (0.0 = deterministic, higher = more creative)
+  temperature: 0
+
+  # System prompt for title generation
+  system_prompt: |
+    You will be given a filename of a video. You must extract a meaningful title from the video. Your response MUST NOT contain any formatting.
+
+    For example:
+    - given a music video, a meaningful title might be "Artist Name - Title (Live from XYZ)"
+    - given a YouTube video, a meaningful title is "Creator Name - Video Title"
